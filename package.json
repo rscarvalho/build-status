@@ -4,6 +4,7 @@
   "description": "A menubar app to display the status of your builds",
   "main": "main.js",
   "scripts": {
+    "app": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,5 +23,8 @@
   "homepage": "https://github.com/rscarvalho/build-status#readme",
   "dependencies": {
     "menubar": "^4.0.2"
+  },
+  "devDependencies": {
+    "electron-prebuilt": "^0.36.7"
   }
 }
