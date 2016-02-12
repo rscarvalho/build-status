@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/rscarvalho/build-status/issues"
   },
-  "homepage": "https://github.com/rscarvalho/build-status#readme"
+  "homepage": "https://github.com/rscarvalho/build-status#readme",
+  "dependencies": {
+    "menubar": "^4.0.2"
+  }
 }
