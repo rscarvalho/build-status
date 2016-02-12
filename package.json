@@ -1,0 +1,23 @@
+{
+  "name": "build-status",
+  "version": "0.0.0",
+  "description": "A menubar app to display the status of your builds",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rscarvalho/build-status.git"
+  },
+  "keywords": [
+    "build",
+    "ci",
+    "continuous-integration"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rscarvalho/build-status/issues"
+  },
+  "homepage": "https://github.com/rscarvalho/build-status#readme"
+}
