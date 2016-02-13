@@ -1,19 +1,26 @@
 'use strict';
 
-var path = require('path');
-var menubar = require('menubar');
+const path = require('path');
+const menubar = require('menubar');
 
-var instance; // eslint-disable-line
-var appDir = path.dirname(__dirname);
+const ROOT_DIR = path.dirname(__dirname);
 
-function startApp() {
-  instance = menubar({
-    dir: appDir,
-    index: 'file://' + appDir + '/html/menubar.html',
-    'preload-window': true
-  });
+class Application {
+  constructor() {
+    this.menubar = null;
+  }
+
+  static start() {
+    this.menubar = menubar({
+      dir: ROOT_DIR,
+      index: `file://${ROOT_DIR}/html/menubar.html`,
+      'preload-window': true
+    });
+
+    this.menubar.on('ready', () => {
+      console.log(`running app. node ${process.version}`);
+    });
+  }
 }
 
-module.exports = {
-  start: startApp
-};
+module.exports = Application;

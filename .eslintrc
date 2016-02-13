@@ -1,6 +1,3 @@
 {
-  "extends": "hubspot/legacy",
-  "rules": {
-    "no-console": 0
-  }
+  "extends": "@shinnn/node"
 }

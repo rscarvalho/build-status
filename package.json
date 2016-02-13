@@ -25,6 +25,8 @@
     "menubar": "^4.0.2"
   },
   "devDependencies": {
-    "electron-prebuilt": "^0.36.7"
+    "@shinnn/eslint-config-node": "^1.0.1",
+    "electron-prebuilt": "^0.36.7",
+    "eslint": "^2.0.0"
   }
 }
