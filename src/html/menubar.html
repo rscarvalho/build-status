@@ -5,6 +5,25 @@
     <title>build-status</title>
   </head>
   <body>
-    <h1>Status goes here</h1>
+    <div id="react-root"></div>
+
+    <script type="text/javascript">
+      var bundlePath = '../../build/menubar.entry.js';
+
+      if (typeof process !== 'undefined' && process.env.ENVIRONMENT === 'dev') {
+        bundlePath = 'http://localhost:8080/build/menubar.entry.js';
+      }
+
+      var bundleScriptEl = document.createElement('script');
+      bundleScriptEl.src = bundlePath;
+      var scriptTag = document.currentScript;
+      var scriptParent = scriptTag.parentNode;
+
+      setTimeout(function() {
+        scriptParent.insertBefore(bundleScriptEl, scriptTag);
+        scriptTag.remove();
+      }, 0);
+
+    </script>
   </body>
 </html>

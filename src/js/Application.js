@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use strict';
 
 const path = require('path');
@@ -10,6 +11,7 @@ class Application {
     this.menubar = menubar({
       dir: ROOT_DIR,
       index: `file://${ROOT_DIR}/html/menubar.html`,
+      tooltip: 'build-status',
       'preload-window': true
     });
 
@@ -24,5 +26,7 @@ class Application {
     }
   }
 }
+
+Application.ROOT_DIR = ROOT_DIR;
 
 module.exports = Application;

@@ -4,7 +4,10 @@
   "description": "A menubar app to display the status of your builds",
   "main": "main.js",
   "scripts": {
-    "app": "electron .",
+    "app": "ENVIRONMENT=dev electron --js-flags=--harmony .",
+    "build": "webpack",
+    "watch": "webpack-dev-server --hot --inline",
+    "start": "foreman start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,11 +25,26 @@
   },
   "homepage": "https://github.com/rscarvalho/build-status#readme",
   "dependencies": {
-    "menubar": "^4.0.2"
+    "babel-core": "^6.5.2",
+    "babel-plugin-transform-runtime": "^6.5.2",
+    "menubar": "^4.0.2",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-hyperscript": "^2.2.2"
   },
   "devDependencies": {
     "@shinnn/eslint-config-node": "^1.0.1",
+    "babel-eslint": "^4.1.8",
+    "babel-loader": "^6.2.2",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
     "electron-prebuilt": "^0.36.7",
-    "eslint": "^2.0.0"
+    "eslint": "^2.0.0",
+    "eslint-config-hubspot": "^5.2.0",
+    "eslint-config-react": "^1.1.1",
+    "eslint-plugin-react": "^3.16.1",
+    "foreman": "^1.4.1",
+    "webpack": "^1.12.13",
+    "webpack-dev-server": "^1.14.1"
   }
 }

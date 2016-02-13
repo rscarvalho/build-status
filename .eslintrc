@@ -1,3 +1,19 @@
 {
-  "extends": "@shinnn/node"
+  "extends": ["@shinnn/node", "hubspot"],
+
+  "ecmaFeatures": {
+    "jsx": true
+  },
+
+  "plugins": [
+    "react"
+  ],
+
+  "globals": {
+    "document": true
+  },
+
+  "settings": {
+    "pragma": "React"
+  }
 }

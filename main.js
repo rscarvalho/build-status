@@ -1,5 +1,3 @@
 'use strict';
 
-var app = require('./src/js/app');
-
-app.start();
+require('./src/js/Application').start();
