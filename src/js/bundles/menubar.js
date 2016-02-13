@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import MenubarWindow from '../containers/MenubarWindow';
 
 ReactDOM.render(
-  <h2>build-status menubar window</h2>,
+  <MenubarWindow/>,
   document.getElementById('react-root')
 );
