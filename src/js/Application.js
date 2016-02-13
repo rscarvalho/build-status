@@ -1,12 +1,15 @@
 /* eslint-disable */
 'use strict';
 
-const path = require('path');
-const menubar = require('menubar');
+import path from 'path'
+import menubar from 'menubar'
+import {BrowserWindow, app} from 'electron';
+import isRenderer from 'is-electron-renderer';
+import './WindowManager';
 
 const ROOT_DIR = path.dirname(__dirname);
 
-class Application {
+export default class Application {
   constructor() {
     this.menubar = menubar({
       dir: ROOT_DIR,
@@ -25,8 +28,12 @@ class Application {
       Application.INSTANCE = new Application();
     }
   }
+
+  static getCurrent() {
+    return Application.INSTANCE;
+  }
+
+  static root() {
+    return ROOT_DIR;
+  }
 }
-
-Application.ROOT_DIR = ROOT_DIR;
-
-module.exports = Application;
