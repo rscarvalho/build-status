@@ -1,0 +1,17 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+
+  "globals": {
+    "should": true
+  },
+
+  "rules": {
+    "func-names": 0,
+    "prefer-arrow-callback": 0,
+    "no-unused-expressions": 0
+  }
+}
