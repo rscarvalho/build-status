@@ -2,6 +2,7 @@ const webpack = require('webpack'); // eslint-disable-line
 const path = require('path');
 
 module.exports = {
+  target: 'electron',
   context: path.join(__dirname, 'src', 'js'),
   entry: {
     menubar: './bundles/menubar'
@@ -12,6 +13,8 @@ module.exports = {
     filename: '[name].entry.js',
     publicPath: 'http://localhost:8080/build/'
   },
+
+  devtool: 'source-map',
 
   module: {
     loaders: [

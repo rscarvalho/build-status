@@ -1,3 +1,7 @@
-'use strict';
+require('babel-register')({
+  presets: ['es2015']
+});
 
-require('./src/js/Application').start();
+var Application = require('./src/js/Application').default; //.start();
+
+Application.start();
